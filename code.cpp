@@ -3,17 +3,23 @@ using namespace std;
 
 int main()
 {
- int i =1;
- int sum=0;
+ bool isPrime = true;
  int n;
- cout<<"enter a number";
+ cout<<"enter n"<<endl;
  cin>>n;
- for (i=1;i<=n;i=i+2)
+ for (int i=2;i<n;i++)
  {
-    sum= sum+i;
-
+    if(n%i==0){
+        isPrime = false;
+    }
  }
- cout<<"sum ="<<sum;
+ if(isPrime)
+ {
+    cout<<"is prime";
+ }
+ else{
+    cout<<"not prime";
+ }
  return 0;
 
 }
