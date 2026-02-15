@@ -8,14 +8,14 @@ int main()
  int n;
  cout<<"enter a number";
  cin>>n;
- for (i=1;i<=n;i++)
+ for (i=1;i<=n;i=i+2)
  {
     sum= sum+i;
 
  }
  cout<<"sum ="<<sum;
  return 0;
- 
+
 }
 
 
