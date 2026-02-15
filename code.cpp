@@ -3,26 +3,16 @@ using namespace std;
 
 int main()
 {
- bool isPrime = true;
- int n;
- cout<<"enter n"<<endl;
- cin>>n;
- for (int i=2;i*i<=n;i++)
- {
-    if(n%i==0){
-        isPrime = false;
+ for (int i=1 ; i<=5;i++){
+    for(int j=1;j<=5;j++)
+    {
+        cout<<"*"<<" ";
     }
- }
- if(isPrime)
- {
-    cout<<"is prime";
- }
- else{
-    cout<<"not prime";
+    cout<<endl;
  }
  return 0;
 
 }
 
 
-// first program 
+// first pattern
