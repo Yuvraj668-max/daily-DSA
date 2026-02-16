@@ -4,7 +4,7 @@ int main(){
   
 int n=4;
 
-char ch='A';
+
 
 for(int i=0;i<n;i++)
 {
@@ -12,9 +12,12 @@ for(int i=0;i<n;i++)
     
     for(int j=i+1;j>0;j--)
     {
-        cout<<ch<<" ";
-        ch=ch+1;
+        cout<<" ";
         
+        
+    }
+    for (int k=n;k>i;k--){
+        cout<<i+1;
     }
     cout<<endl;
     
