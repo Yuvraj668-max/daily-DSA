@@ -1,15 +1,24 @@
 #include <iostream>
 using namespace std;
 
+int SumOfDigits (int n){
+    int sum=0;
+    int remainder;
+    while (n>0){
+        remainder = n%10;
+        sum += remainder;
+        n=n/10;
+
+    }
+    return sum;
+}
+
 int main()
 {
- for (int i=1 ; i<=5;i++){
-    for(int j=1;j<=i;j++)
-    {
-        cout<<"*"<<" ";
-    }
-    cout<<endl;
- }
+ 
+ int n=1233;
+ int sum=SumOfDigits(n);
+ cout<<sum;
  return 0;
 
 }
