@@ -1,26 +1,24 @@
 #include <iostream>
 using namespace std;
 
-int SumOfDigits (int n){
-    int sum=0;
-    int remainder;
-    while (n>0){
-        remainder = n%10;
-        sum += remainder;
-        n=n/10;
 
-    }
-    return sum;
-}
 
 int main()
 {
  
- int n=1233;
- int sum=SumOfDigits(n);
- cout<<sum;
- return 0;
+int pow=1,ans=0;
+int decNum;
+cout<<"enter number";
+cin>>decNum;
+while (decNum>0){
+    int rem=decNum%2;
+    decNum=decNum/2;
+    ans = ans + (rem*pow);
+    pow =pow*10;
 
+
+}
+cout<<"binary is "<<ans;
 }
 
 
