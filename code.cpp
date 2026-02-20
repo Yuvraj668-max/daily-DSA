@@ -1,30 +1,25 @@
 #include <iostream>
 using namespace std;
 
-bool isPowerOfTwo(int n,int current=1)
+int linearSearch(int arr[],int size , int target)
 {
+    for(int i=0;i<size;i++)
+    {
+        if(arr[i]==target){
+            return i;
+        }
+
+    }
+    return -1;
+}
+
+int main(){
+    int arr[]={1,2,3,4,5,6};
+    int size =6;
+    int index=linearSearch(arr,size,5);
+    cout<<index;
+
     
-    if(current==n){
-        return true;
-    }
-    if(current>n){
-        return false;
-    }
-
-    return isPowerOfTwo(n,current<<1);
 }
-int main()
-{
- int n;
- cout<<"enter a number :";
- cin>>n;
- if(isPowerOfTwo(n)){
-    cout<<"number is a power of 2";
- }
- else{
-    cout<<"number is not a power of 2";
- }
-}
-
 
 // new pattern
