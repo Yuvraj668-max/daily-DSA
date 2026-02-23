@@ -2,25 +2,27 @@
 #include <vector>
 using namespace std;
 
-int linearSearch(vector<int> vec,int target)
+void reverseVector(vector<int> vec)
 {
-    for(int i=0;i<vec.size();i++)
+    int start=0;
+    int end=vec.size()-1;
+    while(start<end)
     {
-        if(vec[i]==target)
-        {
-            return i;
-        }
-
+        swap(vec[start],vec[end]);
+        start++;
+        end--;
     }
-    return -1;
+   for(int value:vec)
+   {
+    cout<<value<<" ";
+   }
 }
+
 int main()
 {
-    vector<int> vec = {1,2,3,4,5,6};
-    int target = 5;
-    int index=linearSearch(vec,target);
-    cout<<index;
-    return 0;
+    vector<int> vec={1,2,3,4,5,6};
+    reverseVector(vec);
+
 }
 // new
 //  pattern
