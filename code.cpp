@@ -1,29 +1,26 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-void reverseArray(int arr[],int size){
-int start=0;
-int end=size-1;
-while(start<end){
-    swap(arr[start],arr[end]);
-    start++;
-    end--;
-
-}
-for(int i=0;i<size;i++)
+int linearSearch(vector<int> vec,int target)
 {
-    cout<<arr[i]<<" ";
+    for(int i=0;i<vec.size();i++)
+    {
+        if(vec[i]==target)
+        {
+            return i;
+        }
 
+    }
+    return -1;
 }
-}
-
-int main(){
-    int arr[]={1,2,3,4,5,6};
-    int size =6;
-    reverseArray(arr,size);
-   
+int main()
+{
+    vector<int> vec = {1,2,3,4,5,6};
+    int target = 5;
+    int index=linearSearch(vec,target);
+    cout<<index;
     return 0;
 }
-
 // new
 //  pattern
