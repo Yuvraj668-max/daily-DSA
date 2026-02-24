@@ -2,27 +2,19 @@
 #include <vector>
 using namespace std;
 
-void reverseVector(vector<int> vec)
-{
-    int start=0;
-    int end=vec.size()-1;
-    while(start<end)
+int main(){
+    int arr[]={1,2,3,4,5};
+    int n=5;
+    for (int st=0;st<n;st++)
     {
-        swap(vec[start],vec[end]);
-        start++;
-        end--;
+        for (int end=st;end<n;end++)
+        {
+            for(int i=st;i<=end;i++)
+            {
+                cout<<arr[i]<<" ";
+            }
+            cout<<endl;
+        }
+        // cout<<endl;
     }
-   for(int value:vec)
-   {
-    cout<<value<<" ";
-   }
 }
-
-int main()
-{
-    vector<int> vec={1,2,3,4,5,6};
-    reverseVector(vec);
-
-}
-// new
-//  pattern
