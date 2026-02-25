@@ -1,42 +1,32 @@
 #include <iostream>
-#include <vector>
-#include <climits> 
+#include<vector>
+
 using namespace std;
-
-vector<int> pairSum(vector<int> &nums,int target)
+int majorityElement(vector<int> &nums)
 {
-    int st=0;
-    int end=nums.size()-1;
-    int ps;
-    vector<int> ans;
-    while(st<end)
+    int n= nums.size()-1;
+    for(int val:nums)
     {
-        ps=nums[st]+nums[end];
-        if(ps < target)
+        int freq=0;
+        for(int vlu:nums)
         {
-            st++;
+            if(val==vlu)
+            {
+                freq++;
+
+            }
         }
-        else if(ps > target)
+        if(freq>n/2)
         {
-            end--;
+            return val;
         }
-        else{
-            ans.push_back(st);
-            ans.push_back(end);
-            return ans;
-
-        }
-
     }
-    return ans;
 }
-
-int main(){
-  vector<int>nums ={1,2,3,4,5};
-  int target =7;
-  vector<int> ans=pairSum(nums,target);
-
-  cout<<ans[0]<<", "<<ans[1]<<endl;
+int main()
+{
+    vector<int> nums={1,2,2,1,1};
+    int ans=majorityElement(nums);
+    cout<<ans;
 
     return 0;
 }
